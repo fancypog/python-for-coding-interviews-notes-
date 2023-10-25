@@ -28,7 +28,7 @@ n = 4
 n = None
 
 # =============================================================================
-# If statements and for loop
+# 2. If statements and for loop
 # =============================================================================
 # Parentheses are needed for multi-line conditions
 if ((n > 2 and n < 5) or n == m):
@@ -48,7 +48,7 @@ for i in range(5, 1, -1):
     print(i)
 
 # =============================================================================
-# Simple calculations, the math library
+# 3. Simple calculations, the math library
 # =============================================================================
 # Division is not automatically rounded
 print(5 / 2)   # 2.5
@@ -76,7 +76,7 @@ float("-inf")
 print(math.pow(2, 200) < float("inf"))
 
 # =============================================================================
-# Lists, stack datastructure, slicing an unpacking
+# 4. Lists, stack datastructure, slicing an unpacking
 # =============================================================================
 # Index: python index starts with 0, -1 is the last value
 list = [1, 2, 3]
@@ -107,7 +107,7 @@ a, b, c, d, e = list3
 print(list3)
 
 # =============================================================================
-# Looping through lists
+# 5. Looping through lists
 # =============================================================================
 # 1. using index: range(len(listname)), listname[i]
 for i in range(len(list)):
@@ -126,7 +126,7 @@ for n1, n2 in zip(nums1, nums2):
     print(n1, n2)
     
 # =============================================================================
-# Sorting
+# 6. Sorting
 # =============================================================================
 list5 = [1, 7, 3, 6, 2, 5, 4]
 # reverse
