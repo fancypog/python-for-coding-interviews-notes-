@@ -54,11 +54,28 @@ def selection_sort3(l1):
 selection_sort3(l3)
 
 # =============================================================================
-# Bubble Sort
+# Bubble Sort / Sinking sort
 # =============================================================================
 
+# 1. Start at index 0, compare
+# 2. Swap if needed
+# 3. Move forward
+
+l4 = [10, 15, 4, 23, 0]
+
+def bubble_sort(l1):
+    for j in range(len(l1)-1):
+        for i in range(len(l1)-1-j): # For each iteration, the biggest value will be pushed to the last
+            if l1[i] > l1[i+1]:
+                l1[i], l1[i+1] = l1[i+1], l1[i]
+    return l1
+bubble_sort(l4)       
 
 
+
+# =============================================================================
+# Quick sort
+# =============================================================================
 
 # =============================================================================
 # Quick sort
