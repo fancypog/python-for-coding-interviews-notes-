@@ -77,6 +77,7 @@ bubble_sort(l4)
 # Quick sort
 # =============================================================================
 
+
 # Divede and conquer
 # Pivot element, smaller ones one one side, bigger ones the other
 
@@ -84,20 +85,35 @@ l5 = [14, 100, 25, 1, 14, 17]
 
 # Choose the last element as the pivot element
 # How to do it recursively?
-def quick_sort(l1):
-    pivot = l1[-1]
-    left = 0
-    right = len(l1) - 2
-    while left <= right and left <= len(l1) and right >= 0:
-        if l1[left] <= pivot:
+
+# To get the correct position of the pivot element
+def pivot_place(l1, first, last):
+    pivot = l1[first] # Select the first element as the pivot element
+    left = first + 1
+    right = last
+    while True:
+        while left <= right and l1[left] <= pivot:
             left += 1
+        while left <= right and l1[right] >= pivot:
+            right -= 1
+        if right < left:
+            break
         else:
             l1[left], l1[right] = l1[right], l1[left]
-        if l1[right] >= pivot:
-            right -= 1
-        else: l1[left], l1[right] = l1[right], l1[left]
-    
-    return l1
+    l1[first], l1[right] = l1[right], l1[first]
+    return right
+        
+        
+ # Divide the list and do it recursively   
+def quick_sort(l1, first, last):
+    if first < last:
+        p = pivot_place(l1, first, last)
+        quick_sort(l1, first, p-1)
+        quick_sort(l1, p+1, last)
+
+
+quick_sort(l5, 0, len(l5)-1)
+print(l5)
 
 quick_sort(l5)
     
