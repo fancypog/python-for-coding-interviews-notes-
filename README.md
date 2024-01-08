@@ -1,10 +1,17 @@
-# python-for-coding-interviews-notes-
-Notes for interview preperation in python
-1. basics
-   Python syntax and tricks
-3. OOP_Python
-   Linked list implementation
-5. sorting_algorithms
-   Selection sort, bubble sort, quick sort, merge sort, bucket sort implementation.
-7. searching_algorithms
-   Binary search implementation
+# Python for Coding Interviews Notes
+
+## 1. Basics
+   - Python Syntax and Tricks
+
+## 2. Object-Oriented Programming in Python (OOP)
+   - Linked List Implementation
+
+## 3. Sorting Algorithms
+   - Selection Sort
+   - Bubble Sort
+   - Quick Sort
+   - Merge Sort
+   - Bucket Sort Implementation
+
+## 4. Searching Algorithms
+   - Binary Search Implementation
