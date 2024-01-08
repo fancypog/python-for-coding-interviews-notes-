@@ -116,4 +116,45 @@ def quick_sort(l1, first, last):
 quick_sort(l5, 0, len(l5)-1)
 print(l5)
 
-# Median of the three
+# =============================================================================
+# Merge sort
+# =============================================================================
+
+l6 = [14, 36, 2, 0, 25, 61, 0, 5]
+
+def sortArray(nums):
+    def merge(nums, L, M, R):
+        left, right = nums[L: M+1], nums[M+1: R+1]
+        i, j, k = L, 0, 0
+
+        while j < len(left) and k < len(right):
+            if left[j] <= right[k]:
+                nums[i] = left[j]
+                j += 1
+            else:
+                nums[i] = right[k]
+                k += 1
+            i += 1
+        while j < len(left):
+            nums[i] = left[j]
+            j += 1
+            i += 1
+        while k < len(right):
+            nums[i] =right[k]
+            k += 1
+            i += 1
+
+        
+    def mergeSort(nums, left, right):
+        if left == right:
+            return nums
+        m = (left + right) // 2
+        mergeSort(nums, left, m)
+        mergeSort(nums, m+1, right)
+        merge(nums, left, m, right)
+        return nums
+    return mergeSort(nums, 0, len(nums)-1)
+
+sortArray(l6)
+
+
