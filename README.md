@@ -15,3 +15,4 @@
 
 ## 4. Searching Algorithms
    - Binary Search Implementation
+   - Binary Search Tree
