@@ -42,3 +42,32 @@ def guessNumber(self, n: int) -> int:
             r = m - 1
         else:
             return m
+
+
+# =============================================================================
+# Binary search tree
+# =============================================================================
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+
+    def insertIntoBST(self, root, val: int):
+        if not root:
+            return TreeNode(val)
+        cur = root
+        while cur:
+            if val < cur.val:
+                if cur.left == None:
+                    cur.left = TreeNode(val)
+                    break
+                cur = cur.left   
+            if val > cur.val:
+                if cur.right == None:
+                    cur.right = TreeNode(val)
+                    break
+                cur = cur.right
+        return root
+    
