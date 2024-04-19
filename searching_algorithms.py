@@ -60,12 +60,12 @@ class TreeNode:
         cur = root
         while cur:
             if val < cur.val:
-                if cur.left == None:
+                if cur.left is None:
                     cur.left = TreeNode(val)
                     break
                 cur = cur.left   
             if val > cur.val:
-                if cur.right == None:
+                if cur.right is None:
                     cur.right = TreeNode(val)
                     break
                 cur = cur.right
