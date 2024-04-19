@@ -122,7 +122,7 @@ print(l5)
 
 l6 = [14, 36, 2, 0, 25, 61, 0, 5]
 
-def sortArray(nums):
+def sort_array(nums):
     def merge(nums, L, M, R):
         left, right = nums[L: M+1], nums[M+1: R+1]
         i, j, k = L, 0, 0
@@ -145,24 +145,24 @@ def sortArray(nums):
             i += 1
 
         
-    def mergeSort(nums, left, right):
+    def merge_sort(nums, left, right):
         if left == right:
             return nums
         m = (left + right) // 2
-        mergeSort(nums, left, m)
-        mergeSort(nums, m+1, right)
+        merge_sort(nums, left, m)
+        merge_sort(nums, m+1, right)
         merge(nums, left, m, right)
         return nums
-    return mergeSort(nums, 0, len(nums)-1)
+    return merge_sort(nums, 0, len(nums)-1)
 
-sortArray(l6)
+sort_array(l6)
 
 # =============================================================================
 # Bucket sort
 # =============================================================================
 nums = [1, 2, 1, 0, 2, 1, 2, 0]
 
-def bucketSort(nums):
+def bucket_sort(nums):
     l, r = 0, len(nums) - 1
     i = 0
 
@@ -179,5 +179,5 @@ def bucketSort(nums):
         i += 1
     return nums
         
-bucketSort(nums)
+bucket_sort(nums)
         
