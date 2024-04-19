@@ -9,28 +9,28 @@ Created on Mon Jan  8 19:22:20 2024
 # =============================================================================
 l1 = [1, 23, 0, 18, 3, 5, 34, 8]
 
-def binarySearch(nums, target, l, r):
+def binary_search(nums, target, l, r):
     m = (l + r)//2
     if l <= r:
         if nums[m] > target:
-            return binarySearch(nums, target, l, m-1)
+            return binary_search(nums, target, l, m-1)
         elif nums[m] < target:
-            return binarySearch(nums, target, m+1, r)
+            return binary_search(nums, target, m+1, r)
         elif nums[m] == target:
             return m
         else:
             return - 1
     else:
         return -1
-    return binarySearch(nums, target, 0, len(nums) - 1)
+    return binary_search(nums, target, 0, len(nums) - 1)
 
-binarySearch(l1, 5, 0, len(l1))
+binary_search(l1, 5, 0, len(l1))
 
 
 
 # In binary search, you can keep an eye of the boundry without using a real array
 # Example: guess number higher or lower (Leetcode problem)
-def guessNumber(self, n: int) -> int:
+def guess_number(self, n: int) -> int:
     l, r = 1, n
     
     while True:
@@ -54,7 +54,7 @@ class TreeNode:
         self.right = right
 
 
-    def insertIntoBST(self, root, val: int):
+    def insert_into_bst(self, root, val: int):
         if not root:
             return TreeNode(val)
         cur = root
