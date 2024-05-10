@@ -16,3 +16,6 @@
 ## 4. Searching Algorithms
    - Binary Search Implementation
    - Binary Search Tree
+## 5. String manipulation
+   - to be added/ note to self: string to list, manipulate, list to string; functions in f-strings need to return values or it will be None; check out string methods such as isdigit()
+     Python String Methods: https://www.w3schools.com/python/python_ref_string.asp
